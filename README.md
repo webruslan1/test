@@ -1,38 +1,56 @@
-# vue-project
+# Выбор вещей
 
-This template should help get you started developing with Vue 3 in Vite.
+Простое приложение для выбора вещей из двух списков.
 
-## Recommended IDE Setup
+## Что внутри
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Vue 3** с Composition API
+- **БЭМ** для стилей (да, полностью по методологии)
+- Минималистичный дизайн без лишних украшательств
 
-## Recommended Browser Setup
+## Быстрый старт
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
+# Установить зависимости
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Запустить в режиме разработки
 npm run dev
 ```
 
-### Compile and Minify for Production
+После этого открываешь браузер на `http://localhost:5173` (или на том порту, который покажет Vite).
 
-```sh
-npm run build
+## Структура проекта
+
 ```
+src/
+├── components/
+│   └── ItemSelection.vue
+├── App.vue
+└── main.js
+```
+
+## Почему именно так
+
+- **БЭМ** — для понятной структуры стилей и легкой поддержки
+- **Composition API** — современный подход Vue 3, проще для тестирования
+- **Простая логика** — без лишних абстракций, код читается как книга
+
+## Что можно улучшить
+
+Если бы это был реальный проект, я бы добавил:
+- TypeScript для типизации
+- Pinia для централизованного стейта (хотя здесь это перебор)
+- Unit-тесты с Vitest
+- E2E тесты с Playwright
+- Историю выбора (undo/redo)
+- Drag & drop для изменения порядка
+
+Но для тестового задания это было бы overengineering)))
+
+## Заметки
+
+Данные сейчас захардкожены прямо в компоненте. В реальном приложении они приходили бы из API, и я бы вынес их в отдельный composable или стор.
+
+---
+
